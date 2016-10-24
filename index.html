@@ -1,14 +1,13 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" />
-        <meta name="keywords" content="灵境雪山豹,VR打造极致虚拟梦境,3D游戏">
+        <meta name="keywords" content="灵境雪山豹,灵境雪山豹科技有限公司,leopard,leopardVR,leopard-vr,VR打造极致虚拟梦境,3D游戏">
         <meta name="Description" content="北京灵境雪山豹科技有限公司">
 		<title>北京灵境雪山豹科技有限公司</title>
         <link href="css/css.css" rel="stylesheet" type="text/css" />        
         <link href="css/animate.css" rel="stylesheet" type="text/css" />
         <link href="css/default.css" rel="stylesheet" type="text/css" />
-		<link href="css/demo1.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="js/init.js" ></script>
    		<script type="text/javascript" src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js" ></script>
    
@@ -30,49 +29,155 @@
 //              $('.pic ul li img').stop().animate({'transform':'scale(1)'},1000);
 //          });
 //      })
+
+//			点击获取高度
 		$(function(){
-			
-			$('#img').hover(function(){
-				alert(1);
-			});
+		 var slideNum = 1000;	
+	  $("#n1").click(function(){
+		$("html,body").animate({scrollTop: 100}, slideNum);
+		 return false;
+	  });
+	  $("#n2").click(function(){
+		  $("html,body").animate({scrollTop: $(".con").offset().top}, slideNum);
+		  return false;
+	  });
+	  $("#n3").click(function(){
+		  $("html,body").animate({scrollTop: $(".a3").offset().top}, slideNum);
+		  return false;
+	  });
+	  $("#n4").click(function(){
+		  $("html,body").animate({scrollTop: $(".a4").offset().top}, slideNum);
+		  return false;
+	  });
+	  $("#n5").click(function(){
+		  $("html,body").animate({scrollTop: $(".a5").offset().top}, slideNum);
+		  return false;
+	  });
+	  	  $("#n6").click(function(){
+		  $("html,body").animate({scrollTop: $(".a6").offset().top}, slideNum);
+		  return false;
+	  });
+	  
+
+
+
+          //点击播放视频	  
+	  
+	  	$('.n1').click(function(e) {
+        $('.show1').show();
+//      $('.show1 video').attr("autoplay","autoplay");
+        $('.video1').trigger('play');
+      
+    });
+		$('.close').click(function(e) {
+        $('.show1').hide();
+//      $('video').trigger('play');
+        $('.video1').trigger('pause');
+//      $('.show1 video').attr("autoplay","");
+        
+    });
+    
+    
+    	  	$('.n2').click(function(e) {
+        $('.show2').show();
+//      $('.show2 video').attr("autoplay","autoplay");
+        $('.video2').trigger('play');
+    });
+		$('.close').click(function(e) {
+        $('.show2').hide();
+//      $('.show2 video').attr("autoplay","");
+		$('.video2').trigger('pause');
+   });
+    
+    
+    	  	$('.n6').click(function(e) {
+        $('.show6').show();
+//      $('.show6 video').attr("autoplay","autoplay");
+        $('.video3').trigger('play');
+    });
+		$('.close').click(function(e) {
+        $('.show6').hide();
+//      $('.show6 video').attr("autoplay","");
+		$('.video3').trigger('pause');
+    });
+		
 		})
 		
     </script>
 	</head>
 	<body>
-<div class="header navbar-fixed-top">
+		<!--弹出框-->
+		<div class="show1" style="width: 100%; height:1000px;margin: auto;  position:fixed; z-index: 99; position:fixed; display:none;background: rgba(0,0,0,1);">
+				<!--<video autoplay="autoplay" controls="controls" width="600px" height="400px" preload >
+				<source src="img/disikongjian.flv" type="video/flv"> 	
+				</video>-->
+<video class="video1" controls preload="auto"   width="50%" height="50%"  poster="" src="img/disikongjian1.mp4"  ></video>
+			<div class="close" style="width: 40px; height: 40px; line-height: 40px; position:absolute; right: 30%; top: 30%; font-size: 5PX; text-align: center; color: #000;font-size: 40px; cursor: pointer; background: #fff; opacity: 0.5; border-radius:50% ; ">X</div>
+
+		</div>
+
+<!--第二个视频-->
+		<div class="show2" style="width: 100%; height:100%;margin: auto;  position:fixed; z-index: 99; position:fixed; display:none;background: rgba(0,0,0,1);">
+				<!--<video autoplay="autoplay" controls="controls" width="600px" height="400px" preload >
+				<source src="img/disikongjian.flv" type="video/flv"> 	
+				</video>-->
+<video class="video2" controls preload="auto"  width="50%" height="50%"  poster="" src="img/jijingzhixue.mp4"></video>
+			<div class="close" style="width: 40px; height: 40px; line-height: 40px; position:absolute; right: 30%; top: 30%; font-size: 5PX; text-align: center; color: #000;font-size: 40px; cursor: pointer; background: #fff; border-radius:50% ;opacity: 0.5; ">X</div>
+
+		</div>
+		
+<!--第三个视频-->		
+		<div class="show6" style="width: 100%; height:100%;margin: auto;  position:fixed; z-index: 99; position:fixed; display:none;background: rgba(0,0,0,1);">
+				<!--<video autoplay=true src="img/disikongjian2.mp4" controls width="600px" height="400px" preload >
+				
+				</video>-->
+<video class="video3" controls preload="auto"  width="50%" height="50%"  poster="" src="img/disikongjian2.mp4"></video>
+
+<!--<embed src="http://player.youku.com/player.php/sid/XMTU0MjgzMDU4OA==/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>-->
+			<div class="close" style="width: 40px; height: 40px; line-height: 40px; position:absolute; right: 30%; top: 30%; font-size: 5PX; text-align: center; color: #000;font-size: 40px; cursor: pointer; background: #fff; border-radius:50% ;opacity: 0.5; ">X</div>
+
+		</div>
+		
+		
+		<!--内容开始-->
+<div class="header navbar-fixed-top ">
 	<header class="">
-		<div class="left-logo fl"><a href="#"><img src="img/logo.png" width="120px"; height="100px"; ></a></div>
+		<div class="left-logo fl"><a href="#"><img src="img/logo.png" width="300px"; height="100px"; ></a></div>
 		<div class="right-nav fr">
 			<ul>
-				<li>首页</li><li >业务</li><li>产品</li><li>团队</li><li>合作伙伴</li><li>联系我们</li>
+				<a href="#" id='n1'><li>首页</li></a>
+				<li><a href="#" id='n2'>业务</a></li>
+				<li><a href="#" id='n3'>产品</a></li>
+				<li><a href="#" id='n4'>团队</a></li>
+				<li><a href="#" id='n5'>合作伙伴</a></li>
+				<li><a href="#" id='n6'>联系我们</a></li>
 			</ul>
 		</div>
 	</header>
 </div>
-	<div style="width: 100%;"><span><img src="img/banner.jpg" width="100%;" ></span></div>
+	<div class="" style="width: 100%;"><span><img src="img/banner.jpg" width="100%;" ></span></div>
      <!--内容开始-->
 <div class="con">
-		<div class="vr">
+		<div class="vr a2 ">
 			<h1>雪豹VR</h1>
 			<p>雪豹VR专注于沉浸式体验的VR技术内容制作公司，为各个行业提供专业的VR体验产品，重点解决包括游戏、室内漫游、产品展示、旅游、广告等各行业B端用户需求，利用3D VR实景拍摄与影视级VR渲染场景虚实结合，专业的策划、程序、美术结合Unity/Unreal等主流引擎将艺术与技术完美结合，打造最优秀的次世代VR产品，优秀的优化方案也使其在安卓端成效亦然，为客户带来方便快捷全景沉浸式的极致体验。</p>
 		</div>
 		<!--业务开始-->
 		<div class="work">
-			<h1>业务</h1>
+			<h1 class="">业务</h1>
 			<div class="pic">
 				<ul>
-					<li><div style=" width: 100%; border: 1px solid #ccc; overflow: hidden;"><img src="img/slide_2.jpg" ></div>
+					<li><div class="radius" ><img src="img/slide_3.jpg" ></div>
 						<h2>VR展示</h2>
 						<p>“使用最新PBR材质系统，1比1制作工业级模型，模拟真实环境，拟真的天气、交互系统，尽显完美的专业级虚拟现实体验。”</p>
 					</li>
-					<li><div style=" width: 100%; border: 1px solid #ccc; overflow: hidden;"><img src="img/slide_1.jpg"></div>
-						<h2>VR展示</h2>
-						<p>“使用最新PBR材质系统，1比1制作工业级模型，模拟真实环境，拟真的天气、交互系统，尽显完美的专业级虚拟现实体验。”</p>
+					<li><div class="radius" style=""><img src="img/slide_1.jpg"></div>
+						<h2>VR房地产</h2>
+						<p>“使用UE4建模VR楼盘、户外和样板间，自写Shader程序，打造顶级光影和材质，让家居处处细节和纹路逼真。增加互动乐趣，感受白天、夜晚的切换，窗外景致的变幻，沙发、电视的选择，在VR样板间扔一个抱枕，仿佛已经到了自己的新家。”</p>
 					</li>
-					<li><div style=" width: 100%; border: 1px solid #ccc; overflow: hidden;"><img src="img/slide_3.jpg"></div>
-						<h2>VR展示</h2>
-						<p>“使用最新PBR材质系统，1比1制作工业级模型，模拟真实环境，拟真的天气、交互系统，尽显完美的专业级虚拟现实体验。”</p>
+					<li><div class="radius"  style=" "><img src="img/slide_2.jpg"></div>
+						<h2>VR游戏</h2>
+						<p  class="a3">出身游戏行业的程序和美术使团队在VR游戏方面有更好的建树， 真正做到娱乐。体验两不误，让玩家用VR的方式体验3A级游戏大作的魅力 ”</p>
 					</li>
 				</ul>
 			</div>
@@ -80,71 +185,69 @@
 		</div>
 		
 			<!--产品开始-->	
-			<div class="product">
-			<h1>产品</h1>
-      <!--轮播开始-->
-
-
- <div style="width:100%;text-align:left">
-<DIV id="demo" style="OVERFLOW: hidden;margin:auto; WIDTH: 80%; COLOR: #ffffff; HEIGHT: 300px" onmousemove="MoveDiv(event);" onmouseout="MoveOutDiv();">
-            
-
-    <div id="demo1" style="width:100%;">
-                  <TABLE cellSpacing=0 cellPadding=0>
-                    <TBODY>
-                    <TR vAlign=top>
-                      <TD vAlign=top noWrap>
-                        <DIV align=right>
-                         <img src="img/1.jpg" width="300px"; id="img">
-                         <img src="img/2.jpg" width="300px"; id="img">
-                         <img src="img/3.jpg" width="300px"; id="img">
-                         <img src="img/4.jpg" width="300px"; id="img">
-                         <img src="img/5.jpg" width="300px"; id="img">
-                         <img src="img/6.jpg" width="300px"; id="img">
-                         <img src="img/7.png" width="300px"; id="img">
-                         <img src="img/8.png" width="300px"; id="img">                       
-                         <img src="img/3.jpg" width="300px"; id="img">                       
-
-
-                  
-      </DIV></TD></TR></TBODY></TABLE></TD>
-                  <TD width="0">
-        <div id="demo2" style="width:100%;"></div>
-       </TD>
-        </TR></TBODY></TABLE>
-      </DIV>
-</div>
-
+			<div class="product ">
+			<h1 class="">产品</h1>
+			<div>
+					<ul>
+						<li><img src="img/1.png" class="n1"><p>第四空间2</p></li>
+						<li><img src="img/2.png" class="n2"><p>寂静之血</p></li>
+						<li><img src="img/3.jpg"><p>暗夜骑士</p></li>
+						<li><img src="img/4.jpg"><p>丧尸围城</p></li>
+						<li><img src="img/5.jpg"><p>村庄守护者</p></li>
+						<li><img src="img/6.png" class="n6"><p>第四空间1</p></li>
+						<li><img src="img/7.png"><p>丰田汽车展示</p></li>
+						<li><img src="img/8.png"><p>室内漫游</p></li>
+						<li class="a4"><img src="img/9.jpg"><p>像素大战</p></li>
+					</ul>
 				
 			</div>
-		
-		
-		
+	
+			</div>
+      <!--轮播开始-->
 		
 					<!--团队开始-->
 					
-	    <div class="team_bg">
+	    <div class="team_bg ">
 	    	<div class="team">
 			<h1>团队</h1>    	
 	    	<ul class="overflow y">
 	    		<li class="join_div mb125 slide_left">
-	    			<div class="left"><img src="img/tx1.jpg"></div>
+	    			<div class="left"><img src="img/zhangpeng1.jpg"></div>
 	    			<div class="text fl">
 	    				<h3>LeoPard</h3>
 	    				<p style="font-size: 15px;">创始人&CEO&CTO</p>
-	    				<p>参与数十款VR游戏研发，2年VR游戏开发经验。 原北京独立灵境科技有限公司(indieVR)CTO。</p>
+	    				<p>参与数十款VR游戏研发，2年VR游戏开发经验。 VR连续创业。</p>
 	    			</div>
 	    		</li>
+
+
+
 	    		<li class="join_div mb125 slide_right">
-	    			<div class="right"><img src="img/tx2.jpg"></div>
+	    			<div class="right"><img src="img/cehua.jpg"></div>
 	    			<div class="text fl">
-	    				<h3>凯子</h3>
-	    				<p style="font-size: 15px;">首席特效师</p>
-	    				<p>参与制作手游《师父去哪儿》，参与制作VR游戏《第四空间》，《死亡骑士》</p>
+	    				<h3>严冬</h3>
+	    				<p style="font-size: 15px;">游戏主策划</p>
+	    				<p>曾负责《龙之Q传》、《仙缘》、《千军破》、《猎刃》等项目</p>
 	    			</div>
 	    		</li>
 	    		<li class="join_div mb125 slide_left">
-	    			<img src="img/tx3.jpg">
+	    			<div class="right"><img src="img/liu.png"></div>
+	    			<div class="text fl">
+	    				<h3>Jason</h3>
+	    				<p style="font-size: 15px;">游戏服务器主程</p>
+	    				<p>英国赫尔大学硕士，十年工作经验，参与制作MMO多人在线跑酷项目、炸弹人项目、社区网络休闲游戏 Web “斗地主、连连看” 、 等项目</p>
+	    			</div>
+	    		</li>
+	    		<!--<li class="join_div mb125 slide_left">
+	    			<div class="right"><img src="img/liujunlang1.jpg"></div>
+	    			<div class="text fl">
+	    				<h3>Jairo</h3>
+	    				<p style="font-size: 15px;">UE4主程</p>
+	    				<p>参与制作手游项目《幻想岛》，VR游戏《村庄守护者》</p>
+	    			</div>
+	    		</li>-->
+	    		<li class="join_div mb125 slide_right">
+	    			<div class="left"><img src="img/siqianyi1.jpg"></div>
 	    			<div class="text fl">
 	    				<h3>kk</h3>
 	    				<p style="font-size: 15px;">技术美术</p>
@@ -152,23 +255,7 @@
 	    			</div>
 	    		</li>
 	    		<li class="join_div mb125 slide_right">
-	    			<div class="left"><img src="img/tx4.jpg"></div>
-	    			<div class="text fl">
-	    				<h3>Kient</h3>
-	    				<p style="font-size: 15px;">U3D主程</p>
-	    				<p>参与VR游戏项目《第四空间》，《死亡骑士》</p>
-	    			</div>
-	    		</li>
-	    		<li class="join_div mb125 slide_left">
-	    			<div class="right"><img src="img/tx5.jpg"></div>
-	    			<div class="text fl">
-	    				<h3>Jairo</h3>
-	    				<p style="font-size: 15px;">UE4主程</p>
-	    				<p>参与制作手游项目《幻想岛》，VR游戏《村庄守护者》</p>
-	    			</div>
-	    		</li>
-	    		<li class="join_div mb125 slide_right">
-	    			<div class="left"><img src="img/tx6.jpg"></div>
+	    			<div class="left"><img src="img/zhangmengjun1.jpg"></div>
 	    			<div class="text fl">
 	    				<h3>军er</h3>
 	    				<p style="font-size: 15px;">技术美术</p>
@@ -179,11 +266,89 @@
 	    	</div>	
 	    </div>		
 
- 
-	
+ 		
+	    	<div class="partner-bg " style="width: 100%;background: #fff; padding: 30px 0;">
+			<h1 class="a5">合作伙伴</h1>    	
+				<div class="partner" style="width: 80%; margin: auto;">
+					<ol style="overflow: hidden; width: 100%;">
+						<li style="width: 12%; float:left;animation-delay:.1s;-webkit-animation-delay:.1s;" class="partner_div"><img src="images/1.1.png" width="100%" ></li>
+						<li style="width: 12%; float: left;" class="partner_div"><img src="images/2.1.png" width="100%" ></li>
+						<li style="width: 12%; float: left;" class="partner_div"><img src="images/3.3.png" width="100%" ></li>
+						<li style="width: 12%; float: left;" class="partner_div"><img src="images/4.1.png" width="100%" ></li>
+						<li style="width: 12%; float: left;" class="partner_div"><img src="images/5.1.png" width="100%" ></li>
+						<li style="width: 12%; float: left;" class="partner_div"><img src="images/6.1.png" width="100%"></li>
+						<li style="width: 12%; float: left;" class="partner_div"><img src="images/7.1.png" width="100%"></li>
+						<li style="width: 12%; float: left;" class="partner_div"><img src="images/8.1.png" width="100%"></li>
+						<li style="width: 12%; float: left;" class="partner_div"><img src="images/9.1.png" width="100%"></li>
+						<li style="width: 12%; float: left;" class="partner_div"><img src="images/10.1.png" width="100%"></li>
+						<li style="width: 12%; float: left;" class="partner_div"><img src="images/11.1.png" width="100%"></li>
+						<li style="width: 12%; float: left;" class="partner_div"><img src="images/12.1.png" width="100%"></li>
+						<li style="width: 12%; float: left;" class="partner_div"><img src="images/13.1.png" width="100%"></li>
+						<li style="width: 12%; float: left;" class="partner_div"><img src="images/14.1.png" width="100%"></li>
+						<li style="width: 12%; float: left;" class="partner_div"><img src="images/15.1.png" width="100%"></li>
+						<li style="width: 12%; float: left;" class="partner_div"><img src="images/16.1.png" width="100%"></li>
+					</ol>
+				</div>
+	    	</div>	
 
+
+</div>
+<div class="footer a6">
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;商务邮箱:BD@leopard-vr.com</p>
+    <p>&nbsp;&nbsp;&nbsp;人事邮箱:HR@leopard-vr.com</p>
+    <P>联系电话：010-56106328</P>
+    <p>地址： 北京市海淀区上地信息路实创商服中心402H</p>
+    <p>北京灵境雪山豹科技有限公司 -  版权所有</p>
+    <p>© All Rights Reserved.</p>
+    <br />
+
+
+    
+	
 </div>
 
 	
 	</body>
 </html>
+
+
+
+
+
+
+
+<!--关闭视频标签解决问题-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
