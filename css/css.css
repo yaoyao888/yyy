@@ -1,0 +1,98 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*全局*/
+*{ margin:0; padding:0; outline:0;}
+body {line-height:30px;color:#444; font-size:13px; margin:0px; padding:0px;font-family: "Microsoft YaHei","微软雅黑",verdana,SimHei,SimSun;}
+ul,ol,li {padding: 0;list-style: none outside none;margin: 0;}
+h1,h2,h3,h4,h5,h6{ font-family: "Microsoft YaHei","微软雅黑",verdana,SimHei,SimSun;}
+a{cursor: pointer; text-decoration:none;}
+a:link,a:visited,a:active{color:#333;}
+a:hover {color:#0078ff;}
+input,textarea{outline: 0;}
+em {font-style:normal;}
+img{ border:0;}
+ul{ width:100%;}
+/*input{ border:none; margin:0px; padding:0px;}*/
+input,button,select,textarea{outline:none;font-family: "Microsoft YaHei","微软雅黑",verdana,SimHei,SimSun;}/*取消chrome下input和textarea的聚焦边框*/
+textarea{resize:none;}/*取消chrome下textarea可拖动放大*/
+img{ border:none; }
+.fl{ float: left; }
+.fr{ float: right; }
+
+/*头部开始*/
+.header{ width: 100%; background: #343434;	position: fixed!important;	top: 0;	left: 0px;  margin: auto;z-index: 100;}
+.header header{ width: 80%; margin: auto; overflow: hidden; padding-top: 10px;}
+.left-logo{ display: block; width: 10%;}
+.right-nav{ text-align: right; display: block; widows: 70%; }
+.right-nav ul{ height: 105px;display:table-cell; vertical-align:bottom; }
+.right-nav ul li{display: inline-block; font-size: 20px;color: #fff; padding: 10px 20px;border-bottom:2px solid #343434;cursor:pointer; }
+.right-nav ul li:hover{border-bottom:2px solid #fff; background:#000;}
+/*内容开始*/
+
+.con{width:100%;height: 30px;}
+.con .vr{ width: 80%; margin: auto; padding: 30px 0;}
+.con h1{text-align:center;font-size: 30px; margin-bottom: 20px;}
+.con p{ font-size: 20px;color: #81858f;}
+.con h2{ text-align: center; margin: 20px 0; }
+
+/*业务开始*/
+.con .work{width: 100%; background: #f4f9fc;padding: 30px 0; overflow: hidden;}
+.con .work .pic{ width: 80%; margin: auto;}
+.con .work .pic ul{ width: 100%;}
+.con .work .pic ul li{ width: 30%; float: left; }
+.con .work .pic ul li:nth-child(2){ margin: 0 3.3%;  }
+.con .work .pic ul li img{ width: 150%;transform: scale(1.5) /*border-radius: 50%; transition:opacity .5s,border-radius 0;*/ }
+.con .work .pic ul li img:hover{
+				
+				transform: scale(1);
+				transition: all .5s; 
+			}
+
+/*产品开始*/
+.con .product{ width: 100%;  margin: auto;padding: 30px 0;overflow: hidden;}
+.con .product ul{width: 100%; margin: auto;  }
+.con .product ul li{ width: 9%; float: left;}
+
+.con .product ul li img{ width: 100%; }
+
+
+#jswbox{width:883px;height:420px; margin:0 auto;position:relative; }
+#jswbox ul{position:relative; height:600px;}
+#jswbox li{position:absolute;width:0; height:0; z-index:0; cursor:pointer; overflow:hidden; top:152px; left:10px;}
+#jswbox li img{width:100%; height:100%; vertical-align:top; float:left;}
+#jswbox .prev, #jswbox .next{display:none;}
+
+
+
+/*.con .product ul{ width: 100%; margin-top: 10px;}
+.con .product ul li{ width: 11.1%;float: left;margin-top: 30px;}
+.con .product ul li img{ width: 100%;  border-radius: 50%;}
+.con .product ul li:nth-child(3n-1){ margin-top: 30px; }*/
+
+/*团队开始*/
+.con .team_bg{ width: 100%; background: #f8f8f8; }
+.con .team{ width: 80%; margin: auto;padding: 30px 0; overflow: hidden; background: #f8f8f8;}
+.con .team ul{ width: 100%; margin-top: 10px;overflow: hidden;}
+.con .team ul li{ width: 50%;float: left;margin-top: 40px; }
+.con .team ul li img{ width: 190px; height: ; float: left; border-radius: 50%;}
+.con .team ul li .text{ width: 50%; padding: 0 0 0 40px; }
+.con .team ul li .text h3{ font-size: 25px; }
+
+.slide_left{ opacity:0; transform:translateX(-150px); -webkit-transform:translateX(-150px); animation:JoinLeft 1s linear forwards;-webkit-animation:JoinLeft 1s linear forwards;}
+@keyframes JoinLeft{to{opacity:1;transform:translateX(0);}}
+@-webkit-keyframes JoinLeft{to{opacity:1;-webkit-transform:translateX(0);}}
+.slide_right{ opacity:0; transform:translateX(150px); -webkit-transform:translateX(150px); animation:JoinRight 1s linear forwards;-webkit-animation:JoinRight 1s linear forwards;}
+@keyframes JoinRight{to{ opacity:1;transform:translateX(0);}}
+@-webkit-keyframes JoinRight{to{ opacity:1;-webkit-transform:translateX(0);}}
+
+.banner{ width:80%; height:250px; margin:10px auto; position:relative; overflow:hidden; }
+.banner .banner-box{ width:100%; height:230px;position:absolute;top:0;left:0;}
+.banner ul{ width:100%px; height:250px; padding:5px 0px 5px 5px ; position:absolute;}
+.banner ul li{ width:9.9%; height:250px; float:left; margin-left:17px; cursor:pointer; }
+.banner ul li p{ margin:6px 0 0 17PX; }
+.banner .ul1{top:0;left:0;}
+.banner .ul2{top:0;left:1400px;}
+.leftBtn { left: 0;width: 40px; height: 100px; position:absolute; background:url(../images/index.png) no-repeat; top: 50%; margin: -50px 0 0 0; }
+.rightBtn { right: -6px; background-position:-50px 0px; width: 40px; height: 100px; position:absolute; background:url(.
+
